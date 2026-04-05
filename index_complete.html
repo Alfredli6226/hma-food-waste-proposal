@@ -1,75 +1,602 @@
-                            <div style="text-align: left; padding: 15px; background: #f8f9fa; border-radius: 8px;">
-                                    ✅ <strong>即时收入</strong> - 安装后立即开始盈利
-                                </div>
-                                <div style="text-align: left; padding: 15px; background: #f8f9fa; border-radius: 8px;">
-                                    ✅ <strong>环保合规</strong> - 符合政府环保要求
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="cta-buttons">
-                            <a href="tel:+601110728228" class="cta-btn primary">
-                                📞 立即致电咨询 | Call Now
-                            </a>
-                            <a href="https://wa.me/601110728228" class="cta-btn secondary">
-                                💬 WhatsApp咨询 | WhatsApp Now
-                            </a>
-                        </div>
-                        
-                        <div style="margin-top: 30px; padding: 20px; background: rgba(39, 174, 96, 0.1); border-radius: 10px;">
-                            <h5 style="color: var(--primary); margin-bottom: 10px;">联系方式 | Contact Information</h5>
-                            <p><strong>公司:</strong> HMA Digital Sdn Bhd (MyGreenPlus)</p>
-                            <p><strong>电话:</strong> +60 11-1072 8228</p>
-                            <p><strong>WhatsApp:</strong> +60 11-1072 8228</p>
-                            <p><strong>邮箱:</strong> admin@hmadigital.asia</p>
-                            <p><strong>网站:</strong> mygreenplus.com</p>
-                        </div>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGreenPlus Kitchen Oil Recovery System - Bilingual Proposal</title>
+    <style>
+        :root {
+            --primary: #27ae60;
+            --secondary: #2ecc71;
+            --accent: #3498db;
+            --warning: #e74c3c;
+            --success: #2ecc71;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #229954 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .logo span {
+            color: #ffd700;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .language-switch:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+        }
+        
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+        }
+        
+        .bilingual {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .bilingual-item {
+            flex: 1;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .bilingual-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .bilingual-item.english {
+            border-left-color: var(--accent);
+        }
+        
+        .bilingual-item.chinese {
+            border-left-color: var(--success);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 2px solid rgba(39, 174, 96, 0.2);
+        }
+        
+        .calculator {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .input-group input[type="range"] {
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        .input-value {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .calculate-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, #229954 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+        }
+        
+        .results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .result-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+        
+        .result-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 18px 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .cta-btn.primary {
+            background: linear-gradient(135deg, var(--primary) 0%, #229954 100%);
+            color: white;
+        }
+        
+        .cta-btn.secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            z-index: 1001;
+            transition: width 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .bilingual {
+                flex-direction: column;
+            }
+            
+            .calculator-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-btn {
+                min-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <div class="theme-toggle" id="themeToggle">🌙</div>
+    
+    <header>
+        <div class="language-switch" id="languageSwitch">中文</div>
+        <div class="logo">MyGreen<span>Plus</span></div>
+        <div class="tagline">Turning Waste into Wealth | 变废为宝</div>
+        <h1>Kitchen Oil Recovery System</h1>
+        <div class="subtitle">Professional Investment Proposal | 专业投资提案</div>
+        
+        <div class="highlight-box">
+            <div class="bilingual">
+                <div class="bilingual-item english">
+                    <h4>English</h4>
+                    <p><strong>MyGreenPlus Kitchen Oil Recovery System</strong> provides complete used cooking oil solutions for commercial kitchens, turning waste into extra income while solving drainage issues and improving operational efficiency.</p>
+                </div>
+                <div class="bilingual-item chinese">
+                    <h4>中文</h4>
+                    <p><strong>MyGreenPlus厨房油回收系统</strong>为商业厨房提供完整的废食用油解决方案，将废物转化为额外收入，同时解决排水问题和提升运营效率。</p>
                 </div>
             </div>
         </div>
-        
-        <footer>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <p><strong>HMA Digital Sdn Bhd</strong> | MyGreenPlus Kitchen Oil Recovery System</p>
-                <p style="margin-top: 10px; font-size: 0.85rem; color: #95a5a6;">
-                    © 2026 HMA Digital Sdn Bhd. 版权所有。<br>
-                    © 2026 HMA Digital Sdn Bhd. All rights reserved.
-                </p>
-                <p style="margin-top: 15px; font-size: 0.8rem; color: #bdc3c7;">
-                    本提案为专业投资版本，所有数据基于市场研究和试点项目结果。<br>
-                    This proposal is a professional investment version, all data based on market research and pilot project results.
-                </p>
+    </header>
+    
+    <div class="container">
+        <!-- Business Opportunity Section -->
+        <section class="section">
+            <h2 class="section-title">Business Opportunity | 商业机会</h2>
+            <div class="bilingual">
+                <div class="bilingual-item english">
+                    <h4>Market Size & Potential</h4>
+                    <p>Malaysia generates over <strong>100,000 tons</strong> of used cooking oil annually from commercial kitchens. With government regulations tightening on waste disposal, the demand for professional UCO collection services is growing rapidly.</p>
+                    <p><strong>Key Drivers:</strong></p>
+                    <ul>
+                        <li>Government environmental regulations</li>
+                        <li>Restaurant compliance requirements</li>
+                        <li>Biodiesel industry demand</li>
+                        <li>Circular economy initiatives</li>
+                    </ul>
+                </div>
+                <div class="bilingual-item chinese">
+                    <h4>市场规模与潜力</h4>
+                    <p>马来西亚商业厨房每年产生超过<strong>10万吨</strong>废食用油。随着政府对废物处理法规的收紧，专业废油收集服务的需求正在快速增长。</p>
+                    <p><strong>关键驱动因素：</strong></p>
+                    <ul>
+                        <li>政府环保法规</li>
+                        <li>餐厅合规要求</li>
+                        <li>生物柴油行业需求</li>
+                        <li>循环经济倡议</li>
+                    </ul>
+                </div>
             </div>
-        </footer>
+        </section>
+        
+        <!-- Solution Section -->
+        <section class="section">
+            <h2 class="section-title">Our Solution | 我们的解决方案</h2>
+            <div class="bilingual">
+                <div class="bilingual-item english">
+                    <h4>Complete UCO Management System</h4>
+                    <p>We provide end-to-end solutions including:</p>
+                    <ul>
+                        <li><strong>Smart Collection Tanks</strong> - IoT-enabled monitoring</li>
+                        <li><strong>Regular Collection Service</strong> - Scheduled pickups</li>
+                        <li><strong>Processing & Refining</strong> - Quality control</li>
+                        <li><strong>Market Distribution</strong> - Biodiesel feedstock</li>
+                    </ul>
+                </div>
+                <div class="bilingual-item chinese">
+                    <h4>完整的废油管理系统</h4>
+                    <p>我们提供端到端的解决方案，包括：</p>
+                    <ul>
+                        <li><strong>智能收集罐</strong> - 物联网监控</li>
+                        <li><strong>定期收集服务</strong> - 计划性收取</li>
+                        <li><strong>处理与精炼</strong> - 质量控制</li>
+                        <li><strong>市场分销</strong> - 生物柴油原料</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Income Calculator Section -->
+        <section class="section">
+            <h2 class="section-title">Income Calculator | 收入计算器</h2>
+            
+            <div class="calculator">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label for="restaurantType">Restaurant Type | 餐厅类型</label>
+                        <select id="restaurantType">
+                            <option value="small">Small Restaurant (50-100kg/month) | 小型餐厅 (50-100公斤/月)</option>
+                            <option value="medium" selected>Medium Restaurant (100-300kg/month) | 中型餐厅 (100-300公斤/月)</option>
+                            <option value="large">Large Restaurant (300-800kg/month) | 大型餐厅 (300-800公斤/月)</option>
+                            <option value="hotel">Hotel/Resort (800-2000kg/month) | 酒店/度假村 (800-2000公斤/月)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="ucoVolume">UCO Volume (kg/month) | 废油量 (公斤/月)</label>
+                        <input type="range" id="ucoVolume" min="50" max="2000" value="300" step="10">
+                        <div class="input-value" id="ucoVolumeValue">300 kg</div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="ucoPrice">UCO Price (RM/kg) | 废油价格 (令吉/公斤)</label>
+                        <input type="range" id="ucoPrice" min="2.00" max="5.00" value="3.50" step="0.10">
+                        <div class="input-value" id="ucoPriceValue">RM 3.50</div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="compressedOil">Compressed Oil Percentage (%) | 压缩油百分比 (%)</label>
+                        <input type="range" id="compressedOil" min="0" max="30" value="15" step="1">
+                        <div class="input-value" id="compressedOilValue">15%</div>
+                    </div>
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateIncome()">
+                    Calculate Income | 计算收入
+                </button>
+                
+                <div class="results" id="results">
+                    <div class="result-item">
+                        <div class="result-label">Monthly UCO Income | 月度废油收入</div>
+                        <div class="result-value" id="monthlyUCOIncome">RM 1,050.00</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Monthly Compressed Income | 月度压缩油收入</div>
+                        <div class="result-value" id="monthlyCompressedIncome">RM 22.50</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Total Monthly Income | 月度总收入</div>
+                        <div class="result-value" id="totalMonthlyIncome">RM 1,072.50</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Annual Income | 年度收入</div>
+                        <div class="result-value" id="annualIncome">RM 12,870.00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <div class="bilingual">
+                    <div class="bilingual-item english">
+                        <h4>Revenue Streams</h4>
+                        <p><strong>Primary Revenue:</strong> UCO collection & sale to biodiesel plants</p>
+                        <p><strong>Secondary Revenue:</strong> Compressed oil products</p>
+                        <p><strong>Service Revenue:</strong> Monthly maintenance fees</p>
+                        <p><strong>Equipment Revenue:</strong> Smart tank sales/rental</p>
+                    </div>
+                    <div class="bilingual-item chinese">
+                        <h4>收入来源</h4>
+                        <p><strong>主要收入：</strong> 废油收集并销售给生物柴油厂</p>
+                        <p><strong>次要收入：</strong> 压缩油产品</p>
+                        <p><strong>服务收入：</strong> 月度维护费用</p>
+                        <p><strong>设备收入：</strong> 智能罐销售/租赁</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Investment Section -->
+        <section class="section">
+            <h2 class="section-title">Investment Required | 所需投资</h2>
+            <div class="bilingual">
+                <div class="bilingual-item english">
+                    <h4>Initial Investment</h4>
+                    <ul>
+                        <li><strong>Equipment:</strong> RM 50,000 - 200,000</li>
+                        <li><strong>Collection Vehicles:</strong> RM 100,000 - 300,000</li>
+                        <li><strong>Processing Facility:</strong> RM 200,000 - 500,000</li>
+                        <li><strong>Working Capital:</strong> RM 100,000 - 200,000</li>
+                    </ul>
+                    <p><strong>Total: RM 450,000 - 1,200,000</strong></p>
+                </div>
+                <div class="bilingual-item chinese">
+                    <h4>初始投资</h4>
+                    <ul>
+                        <li><strong>设备：</strong> 5万 - 20万令吉</li>
+                        <li><strong>收集车辆：</strong> 10万 - 30万令吉</li>
+                        <li><strong>处理设施：</strong> 20万 - 50万令吉</li>
+                        <li><strong>运营资金：</strong> 10万 - 20万令吉</li>
+                    </ul>
+                    <p><strong>总计：45万 - 120万令吉</strong></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="section">
+            <h2 class="section-title">Contact Us | 联系我们</h2>
+            <div class="highlight-box">
+                <div class="bilingual">
+                    <div class="bilingual-item english">
+                        <h4>English Contact</h4>
+                        <p><strong>Company:</strong> HMA Digital Sdn Bhd (MyGreenPlus)</p>
+                        <p><strong>Phone:</strong> +60 11-1072 8228</p>
+                        <p><strong>WhatsApp:</strong> +60 11-1072 8228</p>
+                        <p><strong>Email:</strong> admin@hmadigital.asia</p>
+                        <p><strong>Website:</strong> mygreenplus.com</p>
+                    </div>
+                    <div class="bilingual-item chinese">
+                        <h4>中文联系</h4>
+                        <p><strong>公司：</strong> HMA Digital Sdn Bhd (MyGreenPlus)</p>
+                        <p><strong>电话：</strong> +60 11-1072 8228</p>
+                        <p><strong>WhatsApp：</strong> +60 11-1072 8228</p>
+                        <p><strong>邮箱：</strong> admin@hmadigital.asia</p>
+                        <p><strong>网站：</strong> mygreenplus.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="tel:+601110728228" class="cta-btn primary">
+                    📞 Call Now | 立即致电
+                </a>
+                <a href="https://wa.me/601110728228" class="cta-btn secondary">
+                    💬 WhatsApp Now | WhatsApp咨询
+                </a>
+            </div>
+        </section>
     </div>
     
+    <footer>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p><strong>HMA Digital Sdn Bhd</strong> | MyGreenPlus Kitchen Oil Recovery System</p>
+            <p style="margin-top: 10px; font-size: 0.85rem; color: #95a5a6;">
+                © 2026 HMA Digital Sdn Bhd. All rights reserved.<br>
+                © 2026 HMA Digital Sdn Bhd. 版权所有。
+            </p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #bdc3c7;">
+                This proposal is a professional investment version, all data based on market research and pilot project results.<br>
+                本提案为专业投资版本，所有数据基于市场研究和试点项目结果。
+            </p>
+        </div>
+    </footer>
+    
     <script>
-        // Progress Bar
-        window.addEventListener('scroll', function() {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('progressBar').style.width = scrolled + '%';
-        });
-        
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
         // Income Calculator Function
         function calculateIncome() {
             // Get input values
@@ -89,113 +616,75 @@
             document.getElementById('monthlyCompressedIncome').textContent = 'RM ' + monthlyCompressedIncome.toFixed(2);
             document.getElementById('totalMonthlyIncome').textContent = 'RM ' + totalMonthlyIncome.toFixed(2);
             document.getElementById('annualIncome').textContent = 'RM ' + annualIncome.toFixed(2);
-            
-            // Update details
-            document.getElementById('incomeDetails').innerHTML = `
-                <p>• 月废油收入: <strong>${ucoVolume}kg × RM ${ucoPrice.toFixed(2)} = RM ${monthlyUCOIncome.toFixed(2)}</strong></p>
-                <p>• 月压缩油收入: <strong>${compressedOilVolume.toFixed(1)}kg × RM 0.50 = RM ${monthlyCompressedIncome.toFixed(2)}</strong></p>
-                <p>• 月总收入: <strong>RM ${totalMonthlyIncome.toFixed(2)}</strong></p>
-                <p>• 年总收入: <strong>RM ${annualIncome.toFixed(2)}</strong></p>
-            `;
-            
-            // Show results
-            document.getElementById('calcResults').style.display = 'block';
-            
-            // Scroll to results
-            document.getElementById('calcResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
         
-        // Restaurant type selection
-        document.getElementById('restaurantType').addEventListener('change', function() {
-            const type = this.value;
-            let volume = 300; // default
-            
-            switch(type) {
-                case 'small':
-                    volume = 75; // average of 50-100
-                    break;
-                case 'medium':
-                    volume = 200; // average of 100-300
-                    break;
-                case 'large':
-                    volume = 400; // average of 300-500
-                    break;
-                case 'hotel':
-                    volume = 750; // average of 500-1000
-                    break;
-                case 'custom':
-                    volume = 300; // keep as is
-                    break;
-            }
-            
-            if(type !== 'custom') {
-                document.getElementById('ucoVolume').value = volume;
-            }
+        // Update slider values
+        document.getElementById('ucoVolume').addEventListener('input', function() {
+            document.getElementById('ucoVolumeValue').textContent = this.value + ' kg';
+        });
+        
+        document.getElementById('ucoPrice').addEventListener('input', function() {
+            document.getElementById('ucoPriceValue').textContent = 'RM ' + parseFloat(this.value).toFixed(2);
+        });
+        
+        document.getElementById('compressedOil').addEventListener('input', function() {
+            document.getElementById('compressedOilValue').textContent = this.value + '%';
+        });
+        
+        // Progress Bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+        
+        // Theme Toggle
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            this.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+        });
+        
+        // Language Switch
+        document.getElementById('languageSwitch').addEventListener('click', function() {
+            // Simple language toggle - in full version would redirect to language-specific pages
+            alert('In full version, this would switch between English and Chinese versions.');
         });
         
         // Initialize calculator
-        window.addEventListener('DOMContentLoaded', function() {
-            calculateIncome(); // Show initial calculation
-        });
+        calculateIncome();
         
-        // Theme Toggle (Simple)
-        const themeToggle = document.createElement('button');
-        themeToggle.innerHTML = '🌙';
-        themeToggle.style.position = 'fixed';
-        themeToggle.style.bottom = '20px';
-        themeToggle.style.right = '20px';
-        themeToggle.style.zIndex = '1000';
-        themeToggle.style.padding = '10px 15px';
-        themeToggle.style.borderRadius = '50%';
-        themeToggle.style.background = 'var(--primary)';
-        themeToggle.style.color = 'white';
-        themeToggle.style.border = 'none';
-        themeToggle.style.cursor = 'pointer';
-        themeToggle.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-        
-        themeToggle.addEventListener('click', function() {
-            document.body.classList.toggle('dark-theme');
-            themeToggle.innerHTML = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
-        });
-        
-        document.body.appendChild(themeToggle);
-        
-        // Dark theme styles
+        // Add dark theme styles
         const darkThemeStyles = `
             <style>
-                .dark-theme {
-                    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
-                    color: #e0e0e0 !important;
+                body.dark-theme {
+                    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                    color: #e0e0e0;
                 }
                 
-                .dark-theme .section {
-                    background: #2c3e50 !important;
-                    color: #e0e0e0 !important;
+                body.dark-theme .section {
+                    background: #2d3748;
+                    color: #e0e0e0;
                 }
                 
-                .dark-theme .stat-card,
-                .dark-theme .process-card,
-                .dark-theme .case-card {
-                    background: #34495e !important;
-                    color: #e0e0e0 !important;
+                body.dark-theme .bilingual-item {
+                    background: #374151;
                 }
                 
-                .dark-theme .comparison-table {
-                    background: #34495e !important;
-                    color: #e0e0e0 !important;
+                body.dark-theme .calculator {
+                    background: #374151;
                 }
                 
-                .dark-theme .comparison-table th {
-                    background: #2c3e50 !important;
+                body.dark-theme .result-item {
+                    background: #2d3748;
                 }
                 
-                .dark-theme .comparison-table td {
-                    border-color: #4a6572 !important;
+                body.dark-theme .input-group label {
+                    color: #d1d5db;
                 }
                 
-                .dark-theme footer {
-                    background: #2c3e50 !important;
-                    color: #e0e0e0 !important;
+                body.dark-theme footer {
+                    background: #1f2937;
                 }
             </style>
         `;
