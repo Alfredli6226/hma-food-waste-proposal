@@ -1,0 +1,206 @@
+                            <div style="text-align: left; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                    ✅ <strong>即时收入</strong> - 安装后立即开始盈利
+                                </div>
+                                <div style="text-align: left; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                    ✅ <strong>环保合规</strong> - 符合政府环保要求
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <a href="tel:+601110728228" class="cta-btn primary">
+                                📞 立即致电咨询 | Call Now
+                            </a>
+                            <a href="https://wa.me/601110728228" class="cta-btn secondary">
+                                💬 WhatsApp咨询 | WhatsApp Now
+                            </a>
+                        </div>
+                        
+                        <div style="margin-top: 30px; padding: 20px; background: rgba(39, 174, 96, 0.1); border-radius: 10px;">
+                            <h5 style="color: var(--primary); margin-bottom: 10px;">联系方式 | Contact Information</h5>
+                            <p><strong>公司:</strong> HMA Digital Sdn Bhd (MyGreenPlus)</p>
+                            <p><strong>电话:</strong> +60 11-1072 8228</p>
+                            <p><strong>WhatsApp:</strong> +60 11-1072 8228</p>
+                            <p><strong>邮箱:</strong> admin@hmadigital.asia</p>
+                            <p><strong>网站:</strong> mygreenplus.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p><strong>HMA Digital Sdn Bhd</strong> | MyGreenPlus Kitchen Oil Recovery System</p>
+                <p style="margin-top: 10px; font-size: 0.85rem; color: #95a5a6;">
+                    © 2026 HMA Digital Sdn Bhd. 版权所有。<br>
+                    © 2026 HMA Digital Sdn Bhd. All rights reserved.
+                </p>
+                <p style="margin-top: 15px; font-size: 0.8rem; color: #bdc3c7;">
+                    本提案为专业投资版本，所有数据基于市场研究和试点项目结果。<br>
+                    This proposal is a professional investment version, all data based on market research and pilot project results.
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Progress Bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Income Calculator Function
+        function calculateIncome() {
+            // Get input values
+            const ucoVolume = parseFloat(document.getElementById('ucoVolume').value);
+            const ucoPrice = parseFloat(document.getElementById('ucoPrice').value);
+            const compressedOilPercent = parseFloat(document.getElementById('compressedOil').value);
+            
+            // Calculate incomes
+            const monthlyUCOIncome = ucoVolume * ucoPrice;
+            const compressedOilVolume = ucoVolume * (compressedOilPercent / 100);
+            const monthlyCompressedIncome = compressedOilVolume * 0.50; // RM 0.50 per kg for compressed oil
+            const totalMonthlyIncome = monthlyUCOIncome + monthlyCompressedIncome;
+            const annualIncome = totalMonthlyIncome * 12;
+            
+            // Update results
+            document.getElementById('monthlyUCOIncome').textContent = 'RM ' + monthlyUCOIncome.toFixed(2);
+            document.getElementById('monthlyCompressedIncome').textContent = 'RM ' + monthlyCompressedIncome.toFixed(2);
+            document.getElementById('totalMonthlyIncome').textContent = 'RM ' + totalMonthlyIncome.toFixed(2);
+            document.getElementById('annualIncome').textContent = 'RM ' + annualIncome.toFixed(2);
+            
+            // Update details
+            document.getElementById('incomeDetails').innerHTML = `
+                <p>• 月废油收入: <strong>${ucoVolume}kg × RM ${ucoPrice.toFixed(2)} = RM ${monthlyUCOIncome.toFixed(2)}</strong></p>
+                <p>• 月压缩油收入: <strong>${compressedOilVolume.toFixed(1)}kg × RM 0.50 = RM ${monthlyCompressedIncome.toFixed(2)}</strong></p>
+                <p>• 月总收入: <strong>RM ${totalMonthlyIncome.toFixed(2)}</strong></p>
+                <p>• 年总收入: <strong>RM ${annualIncome.toFixed(2)}</strong></p>
+            `;
+            
+            // Show results
+            document.getElementById('calcResults').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('calcResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        // Restaurant type selection
+        document.getElementById('restaurantType').addEventListener('change', function() {
+            const type = this.value;
+            let volume = 300; // default
+            
+            switch(type) {
+                case 'small':
+                    volume = 75; // average of 50-100
+                    break;
+                case 'medium':
+                    volume = 200; // average of 100-300
+                    break;
+                case 'large':
+                    volume = 400; // average of 300-500
+                    break;
+                case 'hotel':
+                    volume = 750; // average of 500-1000
+                    break;
+                case 'custom':
+                    volume = 300; // keep as is
+                    break;
+            }
+            
+            if(type !== 'custom') {
+                document.getElementById('ucoVolume').value = volume;
+            }
+        });
+        
+        // Initialize calculator
+        window.addEventListener('DOMContentLoaded', function() {
+            calculateIncome(); // Show initial calculation
+        });
+        
+        // Theme Toggle (Simple)
+        const themeToggle = document.createElement('button');
+        themeToggle.innerHTML = '🌙';
+        themeToggle.style.position = 'fixed';
+        themeToggle.style.bottom = '20px';
+        themeToggle.style.right = '20px';
+        themeToggle.style.zIndex = '1000';
+        themeToggle.style.padding = '10px 15px';
+        themeToggle.style.borderRadius = '50%';
+        themeToggle.style.background = 'var(--primary)';
+        themeToggle.style.color = 'white';
+        themeToggle.style.border = 'none';
+        themeToggle.style.cursor = 'pointer';
+        themeToggle.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            themeToggle.innerHTML = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+        });
+        
+        document.body.appendChild(themeToggle);
+        
+        // Dark theme styles
+        const darkThemeStyles = `
+            <style>
+                .dark-theme {
+                    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+                    color: #e0e0e0 !important;
+                }
+                
+                .dark-theme .section {
+                    background: #2c3e50 !important;
+                    color: #e0e0e0 !important;
+                }
+                
+                .dark-theme .stat-card,
+                .dark-theme .process-card,
+                .dark-theme .case-card {
+                    background: #34495e !important;
+                    color: #e0e0e0 !important;
+                }
+                
+                .dark-theme .comparison-table {
+                    background: #34495e !important;
+                    color: #e0e0e0 !important;
+                }
+                
+                .dark-theme .comparison-table th {
+                    background: #2c3e50 !important;
+                }
+                
+                .dark-theme .comparison-table td {
+                    border-color: #4a6572 !important;
+                }
+                
+                .dark-theme footer {
+                    background: #2c3e50 !important;
+                    color: #e0e0e0 !important;
+                }
+            </style>
+        `;
+        
+        document.head.insertAdjacentHTML('beforeend', darkThemeStyles);
+    </script>
+</body>
+</html>
